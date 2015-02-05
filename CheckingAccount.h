@@ -5,6 +5,8 @@
 
 class CheckingAccount : public BankAccount
 {
+    public:
+        void print();
     private:
         double maxWithdrawlAmount;
 };

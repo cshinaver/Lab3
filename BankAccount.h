@@ -7,7 +7,7 @@ class BankAccount
 {
     public:
         BankAccount();
-        BankAccount(int accountNumber, double balance);
+        BankAccount(int _accountNumber, double _balance);
         void setBalance(double newBalance);
         double getBalance();
     private:
