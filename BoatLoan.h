@@ -3,6 +3,9 @@
  * Maintainers: Jared Rodgers, Charles Shinaver
 */
 
+#ifndef BOATLOAN_H
+#define BOATLOAN_H
+
 class BoatLoan : public BankAccount
 {
     public:
@@ -13,3 +16,4 @@ class BoatLoan : public BankAccount
         int remainingMonthsOfLoan;
 };
 
+#endif

@@ -3,6 +3,9 @@
  * Maintainers: Jared Rodgers, Charles Shinaver
 */
 
+#ifndef BANKACCOUNT_H 
+#define BANKACCOUNT_H 
+
 class BankAccount
 {
     public:
@@ -14,3 +17,5 @@ class BankAccount
         double balance;
         int accountNumber;
 };
+
+#endif

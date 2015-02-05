@@ -3,6 +3,8 @@
  * Maintainers: Jared Rodgers, Charles Shinaver
 */
 
+#ifndef CHECKINGACCOUNT_H
+#define CHECKINGACCOUNT_H
 class CheckingAccount : public BankAccount
 {
     public:
@@ -11,3 +13,4 @@ class CheckingAccount : public BankAccount
         double maxWithdrawlAmount;
 };
 
+#endif
