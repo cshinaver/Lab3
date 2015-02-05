@@ -8,6 +8,13 @@
 
 using namespace std;
 
+CheckingAccount::CheckingAccount(int _accountNumber, double _balance) : BankAccount(_accountNumber, _balance)
+{
+    maxWithdrawlAmount = 0;
+    minWithdrawlAmount = 0;
+    debitCardNumber = 0;
+};
+
 void CheckingAccount::print()
 {
 

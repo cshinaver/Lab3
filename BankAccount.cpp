@@ -11,9 +11,13 @@ BankAccount::BankAccount()
     /*
      * Default constructor
     */
+
+    balance = 0;
+    accountNumber = 0;
+    country = "Latvia";
 }
 
-BankAccount::BankAccount(int _accountNumber, double _balance)
+BankAccount::BankAccount(int _accountNumber, double _balance, string _country)
 {
     /*
      * Non-default constructor
@@ -21,6 +25,8 @@ BankAccount::BankAccount(int _accountNumber, double _balance)
 
     balance = _balance;
     accountNumber = _accountNumber;
+    country = _country;
+
 }
 
 void BankAccount::setBalance(double newBalance)

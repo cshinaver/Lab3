@@ -8,6 +8,14 @@
 
 using namespace std;
 
+BoatLoan::BoatLoan(int _accountNumber, double _balance) : BankAccount(_accountNumber, _balance)
+{
+    maxLootStorage = 0;
+    numOfCannons = 0;
+    remainingMonthsOfLoan = 0;
+}
+
+
 void BoatLoan::print()
 {
     /*
