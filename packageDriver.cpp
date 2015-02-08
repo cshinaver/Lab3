@@ -10,5 +10,6 @@
 int main()
 {
     Package p;
+    cout << p;
 }
 

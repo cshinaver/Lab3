@@ -18,6 +18,11 @@ ostream& operator<<(ostream& out, Package& p)
     /*
      * Shows data about class
     */
+    out << "To: " << p.name << endl;
+    out << "Address: " << p.address << endl;
+    out << "Zip Code: " << p.zipCode << endl;
+    out << "Weight: " << p.weight << endl;
+    out << "Cost Per Ounce: " << p.costPerOunce << endl;
     return out;
 }
 
