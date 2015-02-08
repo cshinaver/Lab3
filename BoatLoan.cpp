@@ -8,7 +8,18 @@
 
 using namespace std;
 
-BoatLoan::BoatLoan(int _accountNumber, double _balance) : BankAccount(_accountNumber, _balance)
+
+BoatLoan::BoatLoan() : BankAccount()
+{
+    /*
+     * Default constructor
+    */
+    maxLootStorage = 0;
+    numOfCannons = 0;
+    remainingMonthsOfLoan = 0;
+}
+
+BoatLoan::BoatLoan(int _accountNumber, double _balance) : BankAccount(_accountNumber, _balance, "USA")
 {
     maxLootStorage = 0;
     numOfCannons = 0;

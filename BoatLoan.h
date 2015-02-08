@@ -11,6 +11,7 @@
 class BoatLoan : public BankAccount
 {
     public:
+        BoatLoan();
         BoatLoan(int _accountNumber, double _balance);
         void print();
     private:
