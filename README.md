@@ -2,16 +2,18 @@
 
 ## Todos
 ### Part 2
-- [ ] Create base class Package with ivars name, address and zip code. Also, weight of package and cost per ounce to ship package, both nonnegative (add check for this)
-- [ ] public base class method called CalculateCost() that returns a double indicating cost to ship package, (CPO * weight)
-- [ ] Derived class called TwoDayPackage with fixedAdditionalCost ivar. Write
+- [ ] [Charles] Create base class Package with ivars name, address and zip code. Also, weight of package and cost per ounce to ship package, both nonnegative (add check for this)
+- [ ] Add checks to make sure weight and cost per ounce non-negative (non-member helper functions)
+- [ ] [Charles] public base class method called CalculateCost() that returns a double indicating cost to ship package, (CPO * weight)
+- [ ] [Charles]Derived class called TwoDayPackage with fixedAdditionalCost ivar. Write
     CalculateCost() method that invokes base class method and adds on fixed
     cost.
-- [ ] Derived class called OvernightPackage with addl ivar extraCostPerOunce.
-- [ ] CalculateCost() method that calls base class CalculateCost() and add on new extraCostPerOunce * weight.
+- [ ] Derived class called OvernightPackage with addl ivar extraCostPerOunce. CalculateCost() method that calls base class CalculateCost() and add on new extraCostPerOunce * weight.
     Return double. 
-- [ ] Provide driver program that will display contents of derived
+- [ ] [Charles] Provide driver program that will display contents of derived
     TwoDayPackage and Overnight Package class
+
+
 
 ### Part 3
 - [ ] Rewrite BankAccount class to use composition (Rewrite BankAccount to use
@@ -35,3 +37,5 @@
     sending these packages by calling virtual functions. For example, this can
     be the
     cost of processing/shipping a day’s orders.
+    
+
