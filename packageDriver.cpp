@@ -9,7 +9,7 @@
 
 int main()
 {
-    Package p;
-    cout << p;
+    Package p("Charles", "Address", "46032", 50, 3.30);
+    cout << p.CalculateCost() << endl;
 }
 

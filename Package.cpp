@@ -6,10 +6,26 @@
 
 #include "Package.h"
 
+double Package::CalculateCost() const
+{
+    /*
+     * Calculates cost of package and returns as double
+    */
+
+    return costPerOunce * weight;
+}
+
 Package::Package() : name("Batman"), address("1007 Mountain Drive, Gotham"), zipCode("08641"), weight(1), costPerOunce(1)
 {
     /*
      * Default constructor
+    */
+}
+
+Package::Package(string _name, string _addr, string _zip, double _weight, double _cpo) :  name(_name), address(_addr), zipCode(_zip), weight(_weight), costPerOunce(_cpo)
+{
+    /*
+     * Non-default constructor
     */
 }
 
