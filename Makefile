@@ -1,17 +1,20 @@
 # Object files:
-OBJ = BankAccount.o BoatLoan.o CheckingAccount.o
+OBJ = BankAccount.o BoatLoan.o CheckingAccount.o BankAccountDriver.o
+OBJ2 = Package.o packageDriver.o
 
 # Header files:
 HDR = BankAccount.h BoatLoan.h CheckingAccount.h
+HDR2 = Package.h
 
 # Libraries
 LIBS = 
 
 # Executable
 EXEC = bankAccount.out
+EXEC2 = packageDriver.out
 
 # One rule to rule them all
-all: $(EXEC)
+all: $(EXEC) $(EXEC2)
 
 # Compile
 CPP = g++ -c -o $@ $<
@@ -25,6 +28,9 @@ LINK = g++ -o $@ ${LIBS}
 $(EXEC) : ${OBJ}
 	${LINK} ${OBJ}
 
+$(EXEC2) : ${OBJ2}
+	${LINK} ${OBJ2}
+
 # Cleaning
 clean:
-	rm *.o $(EXEC)
+	rm *.o $(EXEC) $(EXEC2)
