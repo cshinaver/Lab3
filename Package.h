@@ -25,8 +25,7 @@ class Package
     public:
         Package();
         Package(string _name, string _addr, string _zip, double _weight, double _cpo);
-        double CalculateCost() const;
-        double isNegative (double) const;
+        double calculateCost() const;
 };
 
 #endif
