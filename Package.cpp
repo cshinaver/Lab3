@@ -5,6 +5,7 @@
 */
 
 #include "Package.h"
+#include <stdexcept>
 
 double Package::CalculateCost() const
 {
@@ -27,6 +28,17 @@ Package::Package(string _name, string _addr, string _zip, double _weight, double
     /*
      * Non-default constructor
     */
+
+    // Check for non-negative values for weight and costPerOunce
+    if (weight < 0)
+    {
+        throw invalid_argument("Improper weight inputted. Weight must be nonnegative");
+    }
+    if (costPerOunce < 0)
+    {
+        throw invalid_argument("Improper Cost Per Ounce inputted. Cost Per Ounce must be nonnegative");
+    }
+
 }
 
 ostream& operator<<(ostream& out, Package& p)
@@ -40,20 +52,4 @@ ostream& operator<<(ostream& out, Package& p)
     out << "Weight: " << p.weight << endl;
     out << "Cost Per Ounce: " << p.costPerOunce << endl;
     return out;
-}
-
-double Package::isNegative(double num) const
-{
-    /*
-     * Checks if the input is less than zero
-    */
-    if (num<0)
-    {
-        cout << "Error, the number you input was less than zero. Set to 1." << endl;
-        return 1;
-    }
-    else
-    {
-        return num;
-    }
 }
