@@ -7,7 +7,7 @@
 #include "Package.h"
 #include <stdexcept>
 
-double Package::CalculateCost() const
+double Package::calculateCost() const
 {
     /*
      * Calculates cost of package and returns as double
