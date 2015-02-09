@@ -22,7 +22,7 @@ Package::Package() : name("Batman"), address("1007 Mountain Drive, Gotham"), zip
     */
 }
 
-Package::Package(string _name, string _addr, string _zip, double _weight, double _cpo) :  name(_name), address(_addr), zipCode(_zip), weight(_weight), costPerOunce(_cpo)
+Package::Package(string _name, string _addr, string _zip, double _weight, double _cpo) :  name(_name), address(_addr), zipCode(_zip), weight(isNegative(_weight)), costPerOunce(isNegative(_cpo))
 {
     /*
      * Non-default constructor
@@ -42,7 +42,7 @@ ostream& operator<<(ostream& out, Package& p)
     return out;
 }
 
-double nonNegativeCheck(double num)
+double Package::isNegative(double num) const
 {
     /*
      * Checks if the input is less than zero
