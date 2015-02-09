@@ -23,6 +23,7 @@ int main()
 void displayPackages()
 {
     vector<Package *> packages;
+    double totalCost = 0; 
     
     // Add three Two Day Packages
     packages.push_back(new TwoDayPackage());
@@ -86,7 +87,10 @@ void displayPackages()
     {
         cout << *(packages[i]);
         cout << "Cost to ship: " << packages[i]->calculateCost() << endl << endl;;
+        totalCost += packages[i]->calculateCost();
     }
+
+    cout << "Total cost for shipping packages today was: $" << totalCost << endl;
 
     // Deallocate
     for (int i = 0; i < packages.size(); i++)

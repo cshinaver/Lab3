@@ -25,7 +25,7 @@
     least one
     object that contains a bankAccount for this question.
 
-- [ ] Use the Package inheritance hierarchy created in Part 2 to create a
+- [x] Use the Package inheritance hierarchy created in Part 2 to create a
     program that
     displays address information and calculates shipping costs for several
     packages
