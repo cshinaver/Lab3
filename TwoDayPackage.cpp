@@ -41,13 +41,12 @@ double TwoDayPackage::calculateCost()
     return Package::calculateCost() + fixedAdditionalCost;
 }
 
-ostream& operator<<(ostream& out, TwoDayPackage p)
+void TwoDayPackage::print(ostream& out) const
 {
     /*
      * Shows data about class
     */
-    Package pT = (Package)p;
+    Package pT = (Package)(*this);
     out << pT;
-    out << "Fixed Additional Cost: " << p.fixedAdditionalCost << endl;
-    return out;
+    out << "Fixed Additional Cost: " << fixedAdditionalCost << endl;
 }

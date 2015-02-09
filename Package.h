@@ -14,7 +14,12 @@ using namespace std;
 
 class Package
 {
-    friend ostream& operator<<(ostream& out, Package& p);
+    // std stream interface
+    friend ostream& operator<<(ostream& out, Package& p)
+    {
+        p.print(out);
+        return out;
+    }
 
     private:
         const string name;
@@ -22,6 +27,9 @@ class Package
         const string zipCode;
         const double weight;
         const double costPerOunce;
+        
+        // Printing function virtualized
+        virtual void print(ostream&) const;
     public:
         Package();
         Package(string _name, string _addr, string _zip, double _weight, double _cpo);

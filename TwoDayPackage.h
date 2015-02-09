@@ -11,7 +11,12 @@
 
 class TwoDayPackage : public Package
 {
-    friend ostream& operator<<(ostream& out, TwoDayPackage p);
+    // std stream interface
+    friend ostream& operator<<(ostream& out, TwoDayPackage& p)
+    {
+        p.print(out);
+        return out;
+    }
 
     public:
         TwoDayPackage();
@@ -20,6 +25,9 @@ class TwoDayPackage : public Package
 
     private:
         const double fixedAdditionalCost;
+
+        // Virtualized printing function
+        virtual void print(ostream&) const;
 
 };
 

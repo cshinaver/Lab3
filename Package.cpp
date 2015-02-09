@@ -41,15 +41,14 @@ Package::Package(string _name, string _addr, string _zip, double _weight, double
 
 }
 
-ostream& operator<<(ostream& out, Package& p)
+void Package::print(ostream& out) const
 {
     /*
      * Shows data about class
     */
-    out << "To: " << p.name << endl;
-    out << "Address: " << p.address << endl;
-    out << "Zip Code: " << p.zipCode << endl;
-    out << "Weight: " << p.weight << endl;
-    out << "Cost Per Ounce: " << p.costPerOunce << endl;
-    return out;
+    out << "To: " << name << endl;
+    out << "Address: " << address << endl;
+    out << "Zip Code: " << zipCode << endl;
+    out << "Weight: " << weight << endl;
+    out << "Cost Per Ounce: " << costPerOunce << endl;
 }

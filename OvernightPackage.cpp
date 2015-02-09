@@ -41,13 +41,13 @@ double OvernightPackage::calculateCost()
     return Package::calculateCost() + extraCostPerOunce;
 }
 
-ostream& operator<<(ostream& out, OvernightPackage p)
+
+void OvernightPackage::print(ostream& out) const
 {
     /*
      * prints data about Overnight Package
     */
-    Package pT = (Package)p;
+    Package pT = (Package)(*this);
     out << pT;
-    out << "Extra Cost Per Ounce: " << p.extraCostPerOunce << endl;
-    return out;
+    out << "Extra Cost Per Ounce: " << extraCostPerOunce << endl;
 }
