@@ -13,12 +13,12 @@ using namespace std;
 
 int main()
 {
-    vector<Package> packages;
+    vector<Package *> packages;
     
     // Add three Two Day Packages
-    packages.push_back(TwoDayPackage());
+    packages.push_back(new TwoDayPackage());
     packages.push_back(
-        TwoDayPackage(
+        new TwoDayPackage(
         "Xwing",
         "Aliciousness",
         "55555",
@@ -31,7 +31,7 @@ int main()
     
     for (int i = 0; i < packages.size(); i++)
     {
-        cout << packages[i] << endl;
+        cout << *(packages[i]) << endl;
     }
 
     return 0;
