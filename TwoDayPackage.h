@@ -11,7 +11,7 @@
 
 class TwoDayPackage : public Package
 {
-    friend ostream& operator<<(ostream& out, Package& p);
+    friend ostream& operator<<(ostream& out, TwoDayPackage p);
 
     public:
         TwoDayPackage();
