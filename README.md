@@ -8,9 +8,9 @@
 - [x] [Charles] Derived class called TwoDayPackage with fixedAdditionalCost ivar. Write
     CalculateCost() method that invokes base class method and adds on fixed
     cost.
-- [ ] Derived class called OvernightPackage with addl ivar extraCostPerOunce. CalculateCost() method that calls base class CalculateCost() and add on new extraCostPerOunce * weight.
+- [x] Derived class called OvernightPackage with addl ivar extraCostPerOunce. CalculateCost() method that calls base class CalculateCost() and add on new extraCostPerOunce * weight.
     Return double. 
-- [ ] [Charles] Provide driver program that will display contents of derived
+- [x] [Charles] Provide driver program that will display contents of derived
     TwoDayPackage and Overnight Package class
 
 
