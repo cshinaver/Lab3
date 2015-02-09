@@ -6,10 +6,11 @@
 
 #include <iostream>
 #include "Package.h"
+#include "TwoDayPackage.h"
 
 int main()
 {
-    Package p("Charles", "Address", "46032", 50, 3.30);
-    cout << p.calculateCost() << endl;
+    TwoDayPackage p("Charles", "Address", "46032", 50, 3.30, 5);
+    cout << p << endl;
 }
 

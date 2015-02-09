@@ -1,10 +1,10 @@
 # Object files:
 OBJ = BankAccount.o BoatLoan.o CheckingAccount.o BankAccountDriver.o
-OBJ2 = Package.o packageDriver.o
+OBJ2 = Package.o packageDriver.o TwoDayPackage.o
 
 # Header files:
 HDR = BankAccount.h BoatLoan.h CheckingAccount.h
-HDR2 = Package.h
+HDR2 = Package.h TwoDayPackage.h
 
 # Libraries
 LIBS = 
