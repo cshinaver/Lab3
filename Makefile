@@ -1,7 +1,7 @@
 # Object files:
 OBJ = BankAccount.o BoatLoan.o CheckingAccount.o BankAccountDriver.o
 OBJ2 = Package.o packageDriver.o TwoDayPackage.o OvernightPackage.o
-OBJ3 = Package.o polymorphismPackage.o TwoDayPackage.o
+OBJ3 = Package.o polymorphismPackage.o TwoDayPackage.o OvernightPackage.o
 
 # Header files:
 HDR = BankAccount.h BoatLoan.h CheckingAccount.h
