@@ -33,7 +33,7 @@ OvernightPackage::OvernightPackage(
     */
 }
 
-double OvernightPackage::calculateCost()
+double OvernightPackage::calculateCost() const
 {
     /*
      * Calculates cost with fixed addl cost added

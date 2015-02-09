@@ -12,7 +12,15 @@
 
 using namespace std;
 
+void displayPackages();
+
 int main()
+{
+    displayPackages();
+    return 0;
+}
+
+void displayPackages()
 {
     vector<Package *> packages;
     
@@ -80,6 +88,10 @@ int main()
         cout << "Cost to ship: " << packages[i]->calculateCost() << endl << endl;;
     }
 
-    return 0;
+    // Deallocate
+    for (int i = 0; i < packages.size(); i++)
+    {
+        delete packages[i];
+    }
 }
 

@@ -21,7 +21,7 @@ class TwoDayPackage : public Package
     public:
         TwoDayPackage();
         TwoDayPackage(string _name, string _addr, string _zip, double _weight, double _cpo, double _fixedAddlCost);
-        double calculateCost();
+        virtual double calculateCost() const;
 
     private:
         const double fixedAdditionalCost;

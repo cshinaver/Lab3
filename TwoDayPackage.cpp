@@ -33,7 +33,7 @@ TwoDayPackage::TwoDayPackage(
     */
 }
 
-double TwoDayPackage::calculateCost()
+double TwoDayPackage::calculateCost() const
 {
     /*
      * Calculates cost with fixed addl cost added

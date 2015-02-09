@@ -21,7 +21,7 @@ class OvernightPackage : public Package
     public:
         OvernightPackage();
         OvernightPackage(string _name, string _addr, string _zip, double _weight, double _cpo, double _extraCostPerOunce);
-        double calculateCost();
+        virtual double calculateCost() const;
 
     private:
         const double extraCostPerOunce;

@@ -33,7 +33,7 @@ class Package
     public:
         Package();
         Package(string _name, string _addr, string _zip, double _weight, double _cpo);
-        double calculateCost() const;
+        virtual double calculateCost() const;
 };
 
 #endif
