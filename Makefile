@@ -1,10 +1,12 @@
 # Object files:
 OBJ = BankAccount.o BoatLoan.o CheckingAccount.o BankAccountDriver.o
 OBJ2 = Package.o packageDriver.o TwoDayPackage.o
+OBJ3 = Package.o polymorphismPackage.o TwoDayPackage.o
 
 # Header files:
 HDR = BankAccount.h BoatLoan.h CheckingAccount.h
 HDR2 = Package.h TwoDayPackage.h
+HDR3 = Package.h TwoDayPackage.h
 
 # Libraries
 LIBS = 
@@ -12,9 +14,10 @@ LIBS =
 # Executable
 EXEC = bankAccount.out
 EXEC2 = packageDriver.out
+EXEC3 = polymorphismPackage.out
 
 # One rule to rule them all
-all: $(EXEC) $(EXEC2)
+all: $(EXEC) $(EXEC2) $(EXEC3)
 
 # Compile
 CPP = g++ -c -o $@ $<
@@ -31,6 +34,9 @@ $(EXEC) : ${OBJ}
 $(EXEC2) : ${OBJ2}
 	${LINK} ${OBJ2}
 
+$(EXEC3) : ${OBJ3}
+	${LINK} ${OBJ3}
+
 # Cleaning
 clean:
-	rm *.o $(EXEC) $(EXEC2)
+	rm *.o $(EXEC) $(EXEC2) $(EXEC3)
