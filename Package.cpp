@@ -44,6 +44,9 @@ ostream& operator<<(ostream& out, Package& p)
 
 double nonNegativeCheck(double num)
 {
+    /*
+     * Checks if the input is less than zero
+    */
     if (num<0)
     {
         cout << "Error, the number you input was less than zero. Set to 1." << endl;
