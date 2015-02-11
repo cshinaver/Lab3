@@ -16,12 +16,16 @@ class BankAccountComposition
     public:
         BankAccountComposition();
         BankAccountComposition(int _accountNumber, double _balance, string _country);
+        BankAccountComposition(int _accountNumber, double _balance, string _country, double _maxWithdrawlAmount, double _minWithdrawlAmount, int debitCardNumber);
         void setBalance(double newBalance);
         double getBalance();
+        void print();
+        void printca();
     private:
         double balance;
         int accountNumber;
         string country;
+        CheckingAccount ca;
 };
 
 #endif

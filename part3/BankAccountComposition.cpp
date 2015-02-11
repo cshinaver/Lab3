@@ -4,9 +4,9 @@
  * Maintainers: Jared Rodgers, Charles Shinaver
 */
 
-#include "BankAccount.h"
+#include "BankAccountComposition.h"
 
-BankAccount::BankAccount()
+BankAccountComposition::BankAccountComposition()
 {
     /*
      * Default constructor
@@ -17,7 +17,7 @@ BankAccount::BankAccount()
     country = "Latvia";
 }
 
-BankAccount::BankAccount(int _accountNumber, double _balance, string _country)
+BankAccountComposition::BankAccountComposition(int _accountNumber, double _balance, string _country)
 {
     /*
      * Non-default constructor
@@ -29,7 +29,23 @@ BankAccount::BankAccount(int _accountNumber, double _balance, string _country)
 
 }
 
-void BankAccount::setBalance(double newBalance)
+BankAccountComposition::BankAccountComposition(int _accountNumber, double _balance, string _country, double _maxWithdrawlAmount, double _minWithdrawlAmount, int _debitCardNumber)
+{
+    /*
+     * Non-default constructor
+    */
+
+    balance = _balance;
+    accountNumber = _accountNumber;
+    country = _country;
+    ca.setMaxWithdrawlAmount(_maxWithdrawlAmount);
+    ca.setMinWithdrawlAmount(_minWithdrawlAmount);
+    ca.setDebitCardNumber(_debitCardNumber);
+
+
+}
+
+void BankAccountComposition::setBalance(double newBalance)
 {
     /*
      * Sets balance
@@ -38,11 +54,29 @@ void BankAccount::setBalance(double newBalance)
     balance = newBalance;
 }
 
-double BankAccount::getBalance()
+double BankAccountComposition::getBalance()
 {
     /*
      * Gets balance
     */
 
     return balance;
+}
+
+void BankAccountComposition::print()
+{
+    /*
+     * Prints Bank info
+    */
+
+    cout << "Bank Account informaiton:" << endl;
+    cout << "Your balance is " << balance << endl;
+    cout << "Your account number is " << accountNumber << endl;
+    cout << "Your country is " << country << endl;
+}
+
+void BankAccountComposition::printca()
+{
+    cout << "Checking Account informaiton:" << endl;
+    ca.print();
 }
