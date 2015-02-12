@@ -1,0 +1,77 @@
+User Perspective
+================
+
+This program can be used by the user in order to show the packages that have
+been stored in the program. After executing the program, all packages are
+output to the console as well as the total cost of sending all the packages. 
+This way the user does not have to add up package costs. 
+
+Internals
+==========
+
+Bank account
+-------------
+
+The bank account class works by storing the account number, the balance, and
+the country of the bank account into an instance of the class. The bank account
+object then can have its balance set to something else using setBalance() or
+return the balance using getBalance(). The checking account class inherits from
+the BankAccount class, meaning it gets the private variables of that class. In
+order to reuse code, the CheckingAccount (and BoatLoan) derived class uses the
+bank account setBalance() method to set its balance. The Checking account can
+also store a max and min withdrawl amount as well as a debit card number. The
+boat loan class stores maxLootStorage, number of cannons and the remaining
+months left on the loan. All three classes have a print function which displays
+their stored information.
+
+Package
+--------
+
+The package class stores the name, address, zip code, weight of package, and
+cost per ounce. of its packages. The derived class Overnight package stores the
+extra cost per ounce (for overnight travel) and the Two Day Package stores the
+extra fixed additional cost. Each class has a print function which will add all
+information pertaining to the class to output printed to the screen. This works
+by overloading the stream operator in each class and calling a virtualized
+print function (to avoid dealing with long virtualized friend functions). There
+is also a virtualized calculate cost method. Depending on the package type, the
+calculate cost will return the cost of shipping the package (including extra
+cost per ounce and fixed additional cost for overnight and two day
+respectively). The virtualization calls the parent calculateCost and print
+methods and then adds on more information from the derived class in order to
+reuse code. 
+
+Inheritence vs Composition
+--------------------------
+
+The question of which approach is more natural presents somewhat of a false
+dichotomy. In some instances, inheritence makes more sense and others
+composition makes more sense. The choice should be based on how your object
+would be perceived in the real world. For example, if one were making a car
+class and wanted to have a "derived class" of a car mirror, it would make more
+sense to use composition. The mirror is part of the car, not a child of the
+car. The mirror should not have any ability to change (or even contain)
+variables of the car itself. It should be self-contained, and the car should
+use it to get information and make changes itself. This also leads to a more
+orthogonal and encapsulated design which is useful when going back to refactor
+and reuse code. In this case with the packages and the bank accounts, it makes
+more sense to use inheritence. The new package types and bank account types are
+exactly that: types of some ancestor that have new features. In this case
+inheritence makes the most sense. 
+
+
+Abstract vs. Concrete
+---------------------
+
+In order to make the parent class more abstract, thought would have to be given
+to what functionality will all children of the class require. This forces us to
+reuse code in later children classes as well as consider the design as a whole.
+The calculateCost method is a good example of an abstraction because all
+children will need it. Another useful abstraction would be a package number. By
+abstracting the base class, we can reuse more code and therefore have to write
+less copied code. In order to make the derived classes more concrete, we would
+have to think of more attributes that belong specifically to a package of that
+class. Two day packages might be the only packages that are taken by plane, in
+which case they must have a flight number. Making the class more concrete means
+it is more useful to the user. 
+
