@@ -1,4 +1,5 @@
 # Lab 3
+Creators: Jared Rogers, Charles Shinaver
 
 ## Todos
 ### Part 2
@@ -15,7 +16,7 @@
 
 
 ### Part 3
-- [ ] Rewrite BankAccount class to use composition (Rewrite BankAccount to use
+- [x] Rewrite BankAccount class to use composition (Rewrite BankAccount to use
     composition (i.e., include a BankAccount
     object in the CreditCard class, similar to lab #1 with cols in a board.
     After you
@@ -36,6 +37,7 @@
     sending these packages by calling virtual functions. For example, this can
     be the
     cost of processing/shipping a day’s orders.
+
 
 
 
